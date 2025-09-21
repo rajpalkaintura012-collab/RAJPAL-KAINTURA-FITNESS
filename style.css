@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  background: #fff;
+  line-height: 1.6; /* Add more space between lines of text */
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 0; /* Remove default top margin */
+  margin-bottom: 0.5rem; /* Add some space below headings */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #111 0%, #1a1a1a 100%);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar .logo { 
+  font-size: 1.3rem; 
+  font-weight: 700; 
+}
+
+.nav-links { 
+  list-style: none; 
+  display: flex; 
+  gap: 1.5rem; /* Increase space between navigation links */
+  margin: 0; 
+  padding: 0; 
+}
+.nav-links a { 
+  color: #fff; 
+  text-decoration: none; 
+  padding: 0.25rem 0.5rem; 
+}
+.nav-links a.active { 
+  border-bottom: 2px solid #ff6b3d; 
+}
+
+.menu-toggle { 
+  display: none; 
+  background: none; 
+  border: none; 
+  color: #fff; 
+  font-size: 1.5rem; 
+}
+
+.hero, .page-hero {
+  height: 56vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 2rem; /* Add padding to the hero section */
+}
+
+.hero-content h2 { 
+  font-size: 2.5rem; /* Increase heading font size for better impact */
+  margin: 0; 
+}
+.hero-content p { 
+  margin-top: 0.8rem; /* Add more space below the paragraph */
+  font-size: 1.1rem;
+}
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem; /* Increase space above the button */
+  padding: 0.75rem 1.5rem; /* Increase padding for a larger button */
+  background: #ff6b3d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+.btn:hover {
+  background-color: #e55c32; /* Add hover effect */
+}
+
+.highlights, .grid, .about, .planner { 
+  padding: 3rem 2rem; /* Increase overall padding for sections */
+  text-align: center; 
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust min width for cards */
+  gap: 2rem; /* Increase space between grid items */
+}
+
+.card {
+  background: #f8f8f8;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px); /* Add a subtle lift effect on hover */
+}
+.card img { 
+  width: 100%; 
+  height: 220px; 
+  object-fit: cover; 
+  display:block; 
+}
+.card h3 { 
+  padding: 1rem 1rem 0; /* Increase padding for headings inside cards */
+}
+.card p { 
+  padding: 0 1rem 1.5rem; /* Increase padding for paragraphs inside cards */
+  color: #555; 
+}
+
+.workouts-grid .card img { 
+  height: 250px; /* Adjust height for workout images */
+}
+
+.about { 
+  display: flex; 
+  gap: 3rem; /* Increase gap in the About section */
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: wrap; 
+}
+.about img { 
+  width: 280px; /* Increase image size in About section */
+  border-radius: 8px; 
+}
+
+footer { 
+  background: #111; 
+  color: #fff; 
+  text-align: center; 
+  padding: 1.5rem; /* Increase footer padding */
+  margin-top: 3rem; /* Increase margin above footer */
+}
+
+/* Planner styles */
+.planner form { 
+  max-width: 800px; /* Increase max width of the form */
+  margin: 0 auto; 
+  display: grid; 
+  gap: 1.5rem; /* Increase gap between form rows */
+}
+.form-row { 
+  display:flex; 
+  gap: 1rem; 
+  align-items:center; 
+}
+.form-row label { 
+  min-width: 160px; /* Increase label width to prevent collision */
+  text-align:left; 
+}
+.form-row input, .form-row select { 
+  flex:1; 
+  padding: 0.75rem; /* Increase padding for form inputs */
+  border-radius:6px; 
+  border:1px solid #ddd; 
+}
+.plan-result { 
+  max-width: 900px; 
+  margin: 2rem auto; /* Increase top margin */
+  background: #fff9f5; 
+  padding: 2rem; /* Increase padding */
+  border-radius: 8px; 
+  border:1px solid #ffe6d8; 
+  text-align: left;
+}
+.plan-result h4 {
+  margin-top: 0;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+  .nav-links { 
+    display: none; 
+    flex-direction: column; 
+    background: #111; 
+    position: absolute; 
+    top: 60px; 
+    right: 0; 
+    padding: 1rem; 
+  }
+  .menu-toggle { 
+    display: block; 
+  }
+  .about { 
+    text-align: center; 
+  }
+  .form-row { 
+    flex-direction: column; 
+    align-items: stretch; 
+  }
+}
